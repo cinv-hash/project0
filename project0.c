@@ -82,7 +82,7 @@ int main() {
     qsort(ch->c, szOfStruct, sizeof(character), charcountcmp);
     
     for(int i = 0; i < szOfStruct; i++){
-        printf("%s -> %d\n", ch[i].c, ch[i].count);
+        printf("%s->%d\n", ch[i].c, ch[i].count);
     }    
 
     return 0;
