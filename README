@@ -1,0 +1,7 @@
+Cin Vaan
+
+To compile, do make all or make to run project0.c, and to clean the file, it'll be make clean.
+
+Sources:
+qsort from Christian Grant's hello.c-3
+
