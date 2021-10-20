@@ -32,24 +32,24 @@ int charcountcmp(const void * left, const void * right) {
 
 int main() {
 
-    unsigned char temp[5];
+    unsigned char temp[5] = {};
     int byteCount = 0;
 
     while(scanf("%c", &temp[0]) != 1){
 
     byteCount++;
-    if ( temp[0] > 0xEF)
+    if ( temp[0] > 239)
     {
         scanf("%3s", &temp[1]);
         byteCount+=3;
     }
-    else if ( temp[0] > 0xDF)
+    else if ( temp[0] > 223)
     {
 
         scanf("%2s", &temp[1]);
         byteCount+=2;
     }
-    else if ( temp[0] > 0xBF)
+    else if ( temp[0] > 191)
     {
         scanf("%1s", &temp[1]);
         byteCount++;
