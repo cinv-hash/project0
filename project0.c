@@ -75,11 +75,8 @@ int main() {
 
     qsort(ch->c, szOfStruct, sizeof(character), charcountcmp);
 
-    for(int i = 0; i < szOfStruct - 1; i++){
-        printf("%s->%d", ch[i].c, ch[i].count);
-	if(i != szOfStruct - 2){
-	printf("\n");
-	}
+    for(int i = 0; i < szOfStruct; i++){
+        printf("%s->%d\n", ch[i].c, ch[i].count);
     }
 
     return 0;
