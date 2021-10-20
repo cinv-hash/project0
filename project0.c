@@ -37,39 +37,39 @@ int main() {
 
     while(scanf("%c", &temp[0]) != EOF){
 
-    byteCount++;
-    if ( temp[0] > 239)
-    {
-        scanf("%3s", &temp[1]);
-        byteCount+=3;
-    }
-    else if ( temp[0] > 223)
-    {
+	    byteCount++;
+	    if ( temp[0] > 239)
+	    {
+	        scanf("%3s", &temp[1]);
+	        byteCount+=3;
+	    }
+	    else if ( temp[0] > 223)
+	    {
 
-        scanf("%2s", &temp[1]);
-        byteCount+=2;
-    }
-    else if ( temp[0] > 191)
-    {
-        scanf("%1s", &temp[1]);
-        byteCount++;
-    }
-    else
-    {
-    }
-    int i = charOccurence(temp);
+	        scanf("%2s", &temp[1]);
+	        byteCount+=2;
+	    }
+	    else if ( temp[0] > 191)
+	    {
+	        scanf("%1s", &temp[1]);
+	        byteCount++;
+	    }
+	    else
+	    {
+	    }
+	    int i = charOccurence(temp);
 
-    if(i == -1){//Unique
-        strcpy(ch[szOfStruct].c, temp); //when unique, cpy the content from buffer to struct's char.
-        ch[szOfStruct].count++; //count the occurence as only 1 time.
-        ch[szOfStruct].first = byteCount; //set location to first
-        szOfStruct++;//arrsizestruct++
-    }
-    else{//duplicate
-        ch[i].count++; //increment the occurence of that character
-    }
+	    if(i == -1){//Unique
+	        strcpy(ch[szOfStruct].c, temp); //when unique, cpy the content from buffer to struct's char.
+	        ch[szOfStruct].count++; //count the occurence as only 1 time.
+	        ch[szOfStruct].first = byteCount; //set location to first
+	        szOfStruct++;//arrsizestruct++
+	    }
+	    else{//duplicate
+	        ch[i].count++; //increment the occurence of that character
+	    }
 
-    memset(temp, '\0', 5);
+	    memset(temp, '\0', 5);
 
     }
 
