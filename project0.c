@@ -35,7 +35,7 @@ int main() {
     unsigned char temp[5] = {};
     int byteCount = 0;
 
-    while(scanf("%c", &temp[0]) != 1){
+    while(scanf("%c", &temp[0]) != EOF){
 
     byteCount++;
     if ( temp[0] > 239)
